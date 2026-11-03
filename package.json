@@ -1,0 +1,26 @@
+{
+  "name": "cypress-aqa-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+ "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:chrome": "cypress run --browser chrome"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HannaSmall/cypress-aqa-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/HannaSmall/cypress-aqa-project/issues"
+  },
+  "homepage": "https://github.com/HannaSmall/cypress-aqa-project#readme",
+  "devDependencies": {
+    "cypress": "^16.2.1"
+  }
+}
