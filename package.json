@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
- "scripts": {
+  "scripts": {
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "cy:run:chrome": "cypress run --browser chrome"
-},
+    "cy:run:chrome": "cypress run --browser chrome",
+   "cy:run:qauto": "cypress run --config-file cypress.qauto.config.js --browser chrome --spec cypress/e2e/garage-expenses.cy.js",
+"cy:run:qauto2": "cypress run --config-file cypress.qauto2.config.js --browser chrome --spec cypress/e2e/garage-expenses.cy.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HannaSmall/cypress-aqa-project.git"
@@ -21,6 +23,7 @@
   },
   "homepage": "https://github.com/HannaSmall/cypress-aqa-project#readme",
   "devDependencies": {
-    "cypress": "^16.2.1"
+    "cypress": "^16.2.1",
+    "mochawesome": "^8.1.1"
   }
 }
