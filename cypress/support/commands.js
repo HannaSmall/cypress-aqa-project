@@ -23,3 +23,20 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("login", () => {
+    cy.env(["userEmail", "userPassword"]).then(
+        ({ userEmail, userPassword }) => {
+            cy.visit("/");
+            cy.contains("button", "Sign In").click();
+
+            cy.get("#signinEmail").type(userEmail);
+            cy.get("#signinPassword").type(userPassword, {
+                sensitive: true,
+            });
+
+            cy.contains(".modal-footer button", "Login").click();
+            cy.url().should("include", "/panel/garage");
+        },
+    );
+});
