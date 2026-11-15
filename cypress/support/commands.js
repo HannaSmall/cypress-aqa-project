@@ -40,3 +40,11 @@ Cypress.Commands.add("login", () => {
         },
     );
 });
+
+Cypress.Commands.add("createExpenseViaApi", (expenseData) => {
+  return cy.request({
+    method: "POST",
+    url: "/api/expenses",
+    body: expenseData,
+  });
+});
